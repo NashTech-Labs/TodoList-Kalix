@@ -1,0 +1,36 @@
+[0m[[0m[0mdebug[0m] [0m[0mExecuting docker push todolist:HEAD-20220711-1054[0m
+[0m[[0m[0minfo[0m] [0m[0mThe push refers to repository [docker.io/library/todolist][0m
+[0m[[0m[0minfo[0m] [0m[0meaa237d11517: Preparing[0m
+[0m[[0m[0minfo[0m] [0m[0m0075bbd42ba6: Preparing[0m
+[0m[[0m[0minfo[0m] [0m[0m39c10f35be97: Preparing[0m
+[0m[[0m[0minfo[0m] [0m[0m31eef4467866: Preparing[0m
+[0m[[0m[0minfo[0m] [0m[0m83b767b06655: Preparing[0m
+[0m[[0m[0minfo[0m] [0m[0m14fbd8039ba4: Preparing[0m
+[0m[[0m[0minfo[0m] [0m[0mda55b45d310b: Preparing[0m
+[0m[[0m[0minfo[0m] [0m[0m14fbd8039ba4: Waiting[0m
+[0m[[0m[0minfo[0m] [0m[0mda55b45d310b: Waiting[0m
+[0m[[0m[31merror[0m] [0m[0mdenied: requested access to the resource is denied[0m
+[0m[[0m[31merror[0m] [0m[0mjava.lang.RuntimeException: Nonzero exit value: 1[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.sys.package$.error(package.scala:30)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.typesafe.sbt.packager.docker.DockerPlugin$.publishDocker(DockerPlugin.scala:732)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.typesafe.sbt.packager.docker.DockerPlugin$.$anonfun$projectSettings$45(DockerPlugin.scala:265)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.typesafe.sbt.packager.docker.DockerPlugin$.$anonfun$projectSettings$45$adapted(DockerPlugin.scala:264)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.foreach(List.scala:431)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.typesafe.sbt.packager.docker.DockerPlugin$.$anonfun$projectSettings$44(DockerPlugin.scala:264)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.typesafe.sbt.packager.docker.DockerPlugin$.$anonfun$projectSettings$44$adapted(DockerPlugin.scala:259)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:68)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.work(Execute.scala:291)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:829)[0m
+[0m[[0m[31merror[0m] [0m[0m(Docker / [31mpublish[0m) Nonzero exit value: 1[0m

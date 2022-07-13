@@ -1,0 +1,86 @@
+[0m[[0m[0mdebug[0m] [0m[0mExecuting Native docker build --force-rm -t todolist:HEAD-20220711-1059 -t todolist:latest .[0m
+[0m[[0m[0mdebug[0m] [0m[0mWorking directory /home/knoldus/IdeaProjects/Kalix/todolist/target/docker/stage[0m
+[0m[[0m[0minfo[0m] [0m[0mSending build context to Docker daemon   56.9MB[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 1/19 : FROM docker.io/library/adoptopenjdk:11-jre-hotspot as stage0[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 2c57fb3bc67b[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 2/19 : LABEL snp-multi-stage="intermediate"[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in b50ff9bccec7[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container b50ff9bccec7[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 4dac1adad593[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 3/19 : LABEL snp-multi-stage-id="43f89e32-3f93-4f59-8463-86543d7fe98d"[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 377887cd9f23[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 377887cd9f23[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 6ded4febf0d5[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 4/19 : WORKDIR /opt/docker[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in e4a196e9f0c2[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container e4a196e9f0c2[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 6dc6a9ef64e2[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 5/19 : COPY 1/opt /1/opt[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 9fd6b98ce145[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 6/19 : COPY 2/opt /2/opt[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 1fcdb83eeed9[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 7/19 : USER root[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 55ed59a11a6b[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 55ed59a11a6b[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 38c98cf7e4a9[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 8/19 : RUN ["chmod", "-R", "u=rX,g=rX", "/1/opt/docker"][0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 7db010953394[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 7db010953394[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 02f8f484460b[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 9/19 : RUN ["chmod", "-R", "u=rX,g=rX", "/2/opt/docker"][0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 2b3da17a0017[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 2b3da17a0017[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 63ab5c82f500[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 10/19 : RUN ["chmod", "u+x,g+x", "/1/opt/docker/bin/todolist"][0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in a115d14edef6[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container a115d14edef6[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 20eca6fbbe8a[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 11/19 : FROM docker.io/library/adoptopenjdk:11-jre-hotspot as mainstage[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 2c57fb3bc67b[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 12/19 : USER root[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Using cache[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 330fed6e8955[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 13/19 : RUN id -u demiourgos728 1>/dev/null 2>&1 || (( getent group 0 1>/dev/null 2>&1 || ( type groupadd 1>/dev/null 2>&1 && groupadd -g 0 root || addgroup -g 0 -S root )) && ( type useradd 1>/dev/null 2>&1 && useradd --system --create-home --uid 1001 --gid 0 demiourgos728 || adduser -S -u 1001 -G root demiourgos728 ))[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Using cache[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 89aac3974b80[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 14/19 : WORKDIR /opt/docker[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Using cache[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 17defd410aee[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 15/19 : COPY --from=stage0 --chown=demiourgos728:root /1/opt/docker /opt/docker[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 5b526a4444f5[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 16/19 : COPY --from=stage0 --chown=demiourgos728:root /2/opt/docker /opt/docker[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 208cfbb603f2[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 17/19 : USER 1001:0[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in ccc8db04dea8[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container ccc8db04dea8[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> ec2c4083b228[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 18/19 : ENTRYPOINT ["/opt/docker/bin/todolist"][0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in 2e6171b29d2f[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container 2e6171b29d2f[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 5e580d24ab8d[0m
+[0m[[0m[0minfo[0m] [0m[0mStep 19/19 : CMD [][0m
+[0m[[0m[0minfo[0m] [0m[0m ---> Running in f4c8c0e1099e[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate container f4c8c0e1099e[0m
+[0m[[0m[0minfo[0m] [0m[0m ---> 99a8fdf8c747[0m
+[0m[[0m[0minfo[0m] [0m[0mSuccessfully built 99a8fdf8c747[0m
+[0m[[0m[0minfo[0m] [0m[0mSuccessfully tagged todolist:HEAD-20220711-1059[0m
+[0m[[0m[0minfo[0m] [0m[0mSuccessfully tagged todolist:latest[0m
+[0m[[0m[0minfo[0m] [0m[0mRemoving intermediate image(s) (labeled "snp-multi-stage-id=43f89e32-3f93-4f59-8463-86543d7fe98d") [0m
+[0m[[0m[0minfo[0m] [0m[0mDeleted Images:[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:20eca6fbbe8a62e62049a4fac68d8ed5c5e05085fa39d97b4017e07cc12050e2[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:1bc8c4047e0ee4efbb3f3c180c300a9b79dfc6db891ceacb939466757bb2c04b[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:63ab5c82f5004d90dc8a43b0e51cdcd3e719a0d016fdd09e152580dbe1ae2f01[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:c8cd1676afe6bf5a2119b031af7538797ad8e66de85eb08be15b2bc146ba13ec[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:02f8f484460b6c2d52c3d238e3b5eab93c71bf9cd11e7fbd5ddf82761a70d415[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:69c9001e03c54da8f8a4ff29d036dac448d2304c17df2a6110fc14e621cf6353[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:38c98cf7e4a96618351f3aa5ee33e4e5214fd566d553ef01e565b0c0da411ad9[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:1fcdb83eeed9d0b2395b3d2f21ff17199e40e8300f3ef84cb7af47a382749f3d[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:00f672ff391dab1b47103e290308ef56841ad00f25885853ce38605502a078e3[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:9fd6b98ce145e5c908ce69dc32309a56e2d1c06648bc901dd605c7bc949b0560[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:9fc74e0d9f513b424522f136e79af4249598aedaae90cf7d673bf7f51a052898[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:6dc6a9ef64e26140b25cc1cc65641978bf9b9a4cec420e241919c76b90bbb3ca[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:d722dd499a59ef92e04938bd78d5513dbd3b00bf8c020369eefe62e9a42e986d[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:6ded4febf0d52aebdec603a6d97114ce116979f1636b1eb5b1e797f4972984ac[0m
+[0m[[0m[0minfo[0m] [0m[0mdeleted: sha256:4dac1adad5939a733ea7bdb2006117de0c073de36b261dccfc45cd9521d4084d[0m
+[0m[[0m[0minfo[0m] [0m[0mTotal reclaimed space: 113.7MB[0m
+[0m[[0m[0minfo[0m] [0m[0mBuilt image todolist with tags [HEAD-20220711-1059, latest][0m

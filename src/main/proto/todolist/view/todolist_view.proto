@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package todolist.view;
+
+import "todolist/domain/todolist_domain.proto";
+import "kalix/annotations.proto";
+import "google/protobuf/any.proto";
+
+service TodoListByName {
+  option(kalix.codegen) = {
+    view: {}
+  };
+
+  rpc UpdateTodoList(domain.TodoItemState) returns (domain.TodoItemState) {
+    option(kalix.method).eventing.in = {
+      value_entity: "todolist"
+    };
+    option(kalix.method).view.update = {
+      table: "todolist"
+    };
+  }
+
+  rpc GetTodoListItems(GetByNameRequest) returns (stream domain.TodoItemState) {
+    option(kalix.method).view.query = {
+      query: "SELECT * FROM todolist where added_by = :name"
+    };
+  }
+}
+
+message GetByNameRequest {
+    string name = 1;
+}
+
+

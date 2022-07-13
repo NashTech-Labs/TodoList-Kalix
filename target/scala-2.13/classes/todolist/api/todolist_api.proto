@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package todolist.api;
+
+import "google/protobuf/empty.proto";
+import "kalix/annotations.proto";
+
+service TodoListService {
+  option (kalix.codegen) = {
+    value_entity: {
+      name: "todolist.domain.TodoItem",
+      entity_type: "todolist",
+      state: "todolist.domain.TodoItemState"
+    }
+  };
+
+  rpc AddItem(TodoItem) returns (google.protobuf.Empty) {}
+
+  rpc GetItemById(GetItemByIdRequest) returns (TodoItem) {}
+
+  rpc UpdateItem(UpdateItemRequest) returns (TodoItem) {}
+
+  rpc MarkAsDone(MarkAsDoneRequest) returns (TodoItem) {}
+
+  rpc DeleteItem(DeleteItemRequest) returns (google.protobuf.Empty) {}
+}
+
+message TodoItem {
+  string item_id = 1 [(kalix.field).entity_key = true];
+  string title = 2;
+  string description = 3;
+  string added_by = 4;
+  bool done = 5;
+}
+
+message GetItemByIdRequest {
+  string item_id = 1 [(kalix.field).entity_key = true];
+}
+
+message UpdateItemRequest {
+  string item_id = 1 [(kalix.field).entity_key = true];
+  optional string title = 2;
+  optional string description = 3;
+}
+
+message DeleteItemRequest {
+  string item_id = 1 [(kalix.field).entity_key = true];
+}
+
+message MarkAsDoneRequest {
+  string item_id = 1 [(kalix.field).entity_key = true];
+}
+
