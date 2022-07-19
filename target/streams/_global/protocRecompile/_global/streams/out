@@ -1,8 +1,0 @@
-[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC service interface for todolist.api.TodoListService[0m
-[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC service interface for todolist.api.TodoListService[0m
-[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC service interface for todolist.view.TodoListByName[0m
-[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC service interface for todolist.view.TodoListByName[0m
-[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC client for todolist.api.TodoListService[0m
-[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC client for todolist.view.TodoListByName[0m
-[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC client for todolist.api.TodoListService[0m
-[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC client for todolist.view.TodoListByName[0m
