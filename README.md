@@ -1,5 +1,5 @@
 # kalix-todolist
-This project demonstrates using Value Entities in Kalixand Views.
+This project demonstrates using Value Entities and Views in Kalix.
 It is a Todo list application. Item is represented as follows:
 ```
 message TodoItemState {
