@@ -1,6 +1,6 @@
 FROM docker.io/library/adoptopenjdk:11-jre-hotspot as stage0
 LABEL snp-multi-stage="intermediate"
-LABEL snp-multi-stage-id="43f89e32-3f93-4f59-8463-86543d7fe98d"
+LABEL snp-multi-stage-id="fa2ab9ef-5ad4-4b98-b382-d0bc96b48f07"
 WORKDIR /opt/docker
 COPY 1/opt /1/opt
 COPY 2/opt /2/opt

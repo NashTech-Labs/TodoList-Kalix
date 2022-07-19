@@ -1,20 +1,20 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todolist.api.TodoListServiceIntegrationSpec, org.scalatest.tools.Framework$$anon$1@13a0982c, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todolist.api.TodoListServiceIntegrationSpec, org.scalatest.tools.Framework$$anon$1@11941c0a, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTodoListServiceIntegrationSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTodoListService[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command AddItem (831 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command GetItem (112 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command AddItem (1 second, 8 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command GetItem (130 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- must handle command UpdateItem (37 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command DeleteItem (36 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command MarkAsDone (30 milliseconds)[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todolist.domain.TodoItemSpec, org.scalatest.tools.Framework$$anon$1@13a0982c, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command DeleteItem (37 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command MarkAsDone (24 milliseconds)[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todolist.domain.TodoItemSpec, org.scalatest.tools.Framework$$anon$1@11941c0a, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTodoItemSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTodoItem[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command AddItem (8 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command AddItem (14 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- must handle command GetItem (1 millisecond)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command DeleteItem (1 millisecond)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command DeleteItem (2 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- must handle command UpdateItem (1 millisecond)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command MarkAsDone (1 millisecond)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 24 seconds, 491 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must handle command MarkAsDone (4 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 45 seconds, 83 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 10[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 10, failed 0, canceled 0, ignored 0, pending 0[0m[0m

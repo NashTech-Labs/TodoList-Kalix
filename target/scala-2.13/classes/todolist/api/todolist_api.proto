@@ -4,6 +4,7 @@ package todolist.api;
 
 import "google/protobuf/empty.proto";
 import "kalix/annotations.proto";
+import "google/api/annotations.proto";
 
 service TodoListService {
   option (kalix.codegen) = {
@@ -14,15 +15,37 @@ service TodoListService {
     }
   };
 
-  rpc AddItem(TodoItem) returns (google.protobuf.Empty) {}
+  rpc AddItem(TodoItem) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/todoitem/add"
+      body: "*"
+    };
+  }
 
-  rpc GetItemById(GetItemByIdRequest) returns (TodoItem) {}
+  rpc GetItemById(GetItemByIdRequest) returns (TodoItem) {
+    option (google.api.http) = {
+      get: "/todoitem/{item_id}"
+    };
+  }
 
-  rpc UpdateItem(UpdateItemRequest) returns (TodoItem) {}
+  rpc UpdateItem(UpdateItemRequest) returns (TodoItem) {
+    option (google.api.http) = {
+      put: "/todoitem/update/{item_id}"
+      body: "*"
+    };
+  }
 
-  rpc MarkAsDone(MarkAsDoneRequest) returns (TodoItem) {}
+  rpc MarkAsDone(MarkAsDoneRequest) returns (TodoItem) {
+    option (google.api.http) = {
+      put: "/todoitem/markasdone/{item_id}"
+    };
+  }
 
-  rpc DeleteItem(DeleteItemRequest) returns (google.protobuf.Empty) {}
+  rpc DeleteItem(DeleteItemRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      delete: "/todoitem/delete/{item_id}"
+    };
+  }
 }
 
 message TodoItem {
